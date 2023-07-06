@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
-RUN apt-get install -y unzip graphviz curl musescore3 python3-pip
+RUN apt-get install -y unzip graphviz curl musescore3 python3-pip --fix-missing
 
 RUN pip install --upgrade pip
 
