@@ -10,6 +10,7 @@ services:
       - ./data/:/app/data
       - ./notebooks/:/app/notebooks
       - ./scripts/:/app/scripts
+      - ./images/:/app/images
     deploy:
       resources:
         reservations:
