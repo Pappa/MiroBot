@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+import tensorflow as tf
+
 
 
 def sample_batch(dataset):
@@ -49,8 +51,15 @@ def display_rows(
     cnt = 0
     for i in range(r):
         for j in range(c):
-            axs[i, j].imshow(images[cnt], cmap=None)
+            axs[i, j].imshow(images[cnt], cmap=cmap)
             axs[i, j].axis("off")
             cnt += 1
 
     plt.show()
+    
+def normalize_image_data(img):
+    """
+    Normalize and reshape the images
+    """
+    img = (tf.cast(img, "float32") - 127.5) / 127.5
+    return img
