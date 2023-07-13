@@ -36,7 +36,7 @@ def display(
 
 
 def display_rows(
-    images, size=(12, 6), r=3, c=6, cmap="gray_r", as_type="float32", save_to=None
+    images, size=(12, 12), r=3, c=6, cmap="gray_r", as_type="float32", save_to=None
 ):
     """
     Displays n random images from each one of the supplied arrays.
