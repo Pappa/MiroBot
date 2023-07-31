@@ -63,3 +63,6 @@ def normalize_image_data(img):
     """
     img = (tf.cast(img, "float32") - 127.5) / 127.5
     return img
+
+def denormalize_image_data(img):
+    return img * 255
